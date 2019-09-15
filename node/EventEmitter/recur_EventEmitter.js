@@ -33,11 +33,8 @@ var myEmitter = new EventEmitter();
 console.log(myEmitter)
 console.log(EventEmitter.prototype)
 myEmitter.on('eventName',callback)
-function callback() {
+function callback(arg1) {
     console.log('test')
+    console.log(arg1)
 }
-myEmitter.emit('eventName')
-
-var myEmitter2 = new EventEmitter();
-myEmitter2.on('startEmit',()=>{console.log('test2')})
-myEmitter2.emit('startEmit')
+myEmitter.emit('eventName','test')

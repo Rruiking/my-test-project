@@ -11,7 +11,8 @@ const EventEmitter = require('events');
 class MyEventEmitter extends EventEmitter{}
 
 const myEmitter = new MyEventEmitter();
-myEmitter.on('event',()=>{
+myEmitter.on('event',(arg1,arg2)=>{
     console.log('event 触发成功！')
+    console.log(`参数1${arg1},参数2${arg2}`)
 })
-myEmitter.emit('event');
+myEmitter.emit('event','test1','test2');
