@@ -182,15 +182,15 @@ function z(obj) {
         z(obj.right)
     }
 }
-z(obj)
 
 // 后续遍历
 function h(obj) {
     if(obj.left){
-        q(obj.left)
+        h(obj.left)
     }
     if(obj.right){
-        q(obj.right)
+        h(obj.right)
     }
     console.log(obj.value)
 }
+h(obj)
